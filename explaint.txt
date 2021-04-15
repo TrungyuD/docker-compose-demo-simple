@@ -1,0 +1,4 @@
+# build tat ca nhung gi trong file docker-compose.yml
+docker-compose up
+# giup chay nen o ben duoi ma ko can ctrl+C de tat di, giup luon chay
+docker-compose up -d

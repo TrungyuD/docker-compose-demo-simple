@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Course</h1>
+    <ul id="coursesContainer"></ul>
+    <script type="text/javascript">
+        let url = 'http://localhost:5001';
+        // let url = 'http://course-service';
+        fetch(url).then(res => res.json())
+        .then(data => {
+            var courses = data.courses;
+            var courseListContent = "";
+            courses.forEach(course => { 
+                courseListContent += `<li>${course}</li>`
+            })
+            document.getElementById("coursesContainer").innerHTML = courseListContent;
+        })
+        .catch(err => console.log(err));
+    </script>
+</body>
+</html>l

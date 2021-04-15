@@ -1,0 +1,16 @@
+# -t : tag, dat ten cho instance
+# . : build tat ca nhung cai trong thu muc hien tai
+docker build -t my-node-app:v0.0.1 .
+
+#show docket image
+docker images
+
+# cu phap de khoi chay docker image
+# -p : bind port 8080 cua docker ra port 5001 tren local
+docker run -p 5001:8080 my-node-app:v0.0.1
+
+# show cac image dang chay
+docker ps 
+
+# stop 1 image dang chay qua id 
+docker container stop 32af5a8e5fee
